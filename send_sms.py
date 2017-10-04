@@ -1,7 +1,7 @@
-from twilio.rest import TwilioRestClient
+from twilio.rest import Client
 from credentials import account_sid, auth_token, my_cell, my_twilio
 
-client = TwilioRestClient(account_sid, auth_token)
+client = Client(account_sid, auth_token)
 
 my_msg = "Insert Message Here"
 
