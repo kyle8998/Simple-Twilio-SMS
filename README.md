@@ -5,7 +5,7 @@ A Small little SMS test project using the Twilio API.
 
 ### Dependencies
 
-Twilio Account
+Twilio Account (Premium for calls)
 
 Phone Number
 
@@ -41,8 +41,6 @@ python3 send_sms.py
 
 ##### Set up Receive Message Server
 
-Add credentials in credential.py file
-
 Change desired response message in receive_sms.py
 
 ```
@@ -57,3 +55,29 @@ ngrok http 5000
 
 Go on the twilio website to your twilio phone number and add the forwarding
 address to the messaging webhook.
+
+##### Call Someone
+
+Add credentials to credential.py file
+
+Run make_call.py
+```
+python3 make_call.py
+```
+
+##### Respond to call
+
+Change desired response message in receive_call.py
+
+```
+python3 receive_call.py
+```
+
+On another terminal run
+```
+ngrok http 5000
+```
+
+Go on the twilio website to your twilio phone number and add the forwarding
+address to the call webhook.
+
